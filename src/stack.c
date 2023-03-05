@@ -1,10 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "../data.h"
-#define NULL_DATA \
-    {             \
-        0, 0      \
-    }
 typedef struct
 {
     Data storages[100];
