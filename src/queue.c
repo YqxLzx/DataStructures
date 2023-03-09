@@ -87,6 +87,14 @@ int getSize(Queue *queue)
     return queue->length;
 }
 
+
+void printQueue(Queue *queue){
+    for(int i = 0; i < queue->length ; i++){
+        printf("i:%d,value:%d\n",i,queue->storages[i].value);
+    }
+    printf("current head:%d",queue->storages[queue->front].value);
+}
+
 int main()
 {
     Queue queue = createQueue();
@@ -102,6 +110,6 @@ int main()
     enqueue(&queue, data4);
     dequeue(&queue);
     enqueue(&queue, data4);
-    printf("value:%d", queue.storages[3].value);
+    printQueue(&queue);
     return 0;
 }
